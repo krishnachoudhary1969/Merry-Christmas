@@ -7,6 +7,10 @@
 ![Christmas](https://img.shields.io/badge/🎄-Christmas%20Vibes-red?style=for-the-badge)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge\&logo=github)
 
+<p align="center">
+  <img src="preview.gif" alt="Merry Christmas SVG Animation Preview" width="720">
+</p>
+
 Ho ho ho! 🎅
 Welcome to **Merry Christmas**, a festive front-end project that brings holiday cheer to life using **SVG animations**, **GSAP**, and a whole lot of sparkle ❄️✨.
 
