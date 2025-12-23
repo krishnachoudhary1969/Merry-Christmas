@@ -14,16 +14,11 @@ html {
   padding: 0;
 }
 
-svg{
-  width:90%;
-  height:90%;
-  visibility:hidden;
-}
-
 #musicToggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 9999; /* 🔥 THIS WAS MISSING */
   background: #c62828;
   color: white;
   border: none;
@@ -63,3 +58,10 @@ svg{
     transform: translateY(110vh);
   }
 }
+
+svg{
+  width:90%;
+  height:90%;
+  visibility:hidden;
+}
+
