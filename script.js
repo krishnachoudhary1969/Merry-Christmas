@@ -242,3 +242,39 @@ mainTl
 
 mainTl.add(starTl, 0);
 gsap.globalTimeline.timeScale(1.5);
+
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
+
+let isPlaying = false;
+
+toggle.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    toggle.textContent = "🔇 Mute";
+  } else {
+    music.pause();
+    toggle.textContent = "🔊 Music";
+  }
+  isPlaying = !isPlaying;
+});
+
+const snowContainer = document.getElementById("snow");
+
+function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.className = "snowflake";
+  snowflake.textContent = "❄";
+
+  snowflake.style.left = Math.random() * window.innerWidth + "px";
+  snowflake.style.animationDuration = 3 + Math.random() * 5 + "s";
+  snowflake.style.fontSize = 8 + Math.random() * 10 + "px";
+
+  snowContainer.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, 8000);
+}
+
+setInterval(createSnowflake, 200);
