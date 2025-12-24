@@ -254,23 +254,42 @@ const music = document.getElementById("bgMusic");
 const toggle = document.getElementById("musicToggle");
 
 
-let audioInitialized = false;
+let isPlaying = false;
+let fadeInterval = null;
 
-document.addEventListener("click", () => {
-  if (!audioInitialized) {
-    music.volume = 0;
-    music.play().then(() => {
-      let v = 0;
-      const fade = setInterval(() => {
-        v += 0.05;
-        music.volume = Math.min(v, 1);
-        if (v >= 1) clearInterval(fade);
+toggle.addEventListener("click", async () => {
+  try {
+    if (!isPlaying) {
+      music.volume = 0;
+      await music.play();
+
+      fadeInterval = setInterval(() => {
+        if (music.volume < 1) {
+          music.volume = Math.min(music.volume + 0.05, 1);
+        } else {
+          clearInterval(fadeInterval);
+        }
       }, 100);
-    }).catch(() => {});
-    audioInitialized = true;
-  }
-}, { once: true });
 
+      toggle.textContent = "🔇 Mute";
+    } else {
+      fadeInterval = setInterval(() => {
+        if (music.volume > 0) {
+          music.volume = Math.max(music.volume - 0.05, 0);
+        } else {
+          clearInterval(fadeInterval);
+          music.pause();
+        }
+      }, 100);
+
+      toggle.textContent = "🔊 Music";
+    }
+
+    isPlaying = !isPlaying;
+  } catch (err) {
+    console.error("Audio error:", err);
+  }
+});
 
 const snowContainer = document.getElementById("snow");
 
@@ -300,3 +319,10 @@ gsap.from(".christmas-text", {
   delay: 1
 });
 
+gsap.from(".footer-credit", {
+  opacity: 0,
+  y: 10,
+  duration: 2,
+  ease: "power2.out",
+  delay: 2
+});
