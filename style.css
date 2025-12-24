@@ -79,3 +79,31 @@ svg{
   z-index: 5;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
+
+.footer-credit {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Georgia", "Times New Roman", serif;
+  z-index: 5;
+}
+
+.footer-credit a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-credit a:hover {
+  text-decoration: underline;
+}
+
+gsap.from(".footer-credit", {
+  opacity: 0,
+  y: 10,
+  duration: 2,
+  ease: "power2.out",
+  delay: 2
+});
