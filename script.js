@@ -259,7 +259,7 @@ toggle.addEventListener("click", async () => {
   try {
     if (!isPlaying) {
       music.volume = 0;
-      await music.play(); // ✅ allowed because of user click
+      await music.play();
 
       let v = 0;
       const fade = setInterval(() => {
@@ -278,6 +278,24 @@ toggle.addEventListener("click", async () => {
     console.error("Audio blocked:", err);
   }
 });
+
+
+let audioInitialized = false;
+
+document.addEventListener("click", () => {
+  if (!audioInitialized) {
+    music.volume = 0;
+    music.play().then(() => {
+      let v = 0;
+      const fade = setInterval(() => {
+        v += 0.05;
+        music.volume = Math.min(v, 1);
+        if (v >= 1) clearInterval(fade);
+      }, 100);
+    }).catch(() => {});
+    audioInitialized = true;
+  }
+}, { once: true });
 
 
 const snowContainer = document.getElementById("snow");
@@ -300,4 +318,11 @@ function createSnowflake() {
 
 setInterval(createSnowflake, 200);
 
+gsap.from(".christmas-text", {
+  opacity: 0,
+  y: 10,
+  duration: 2,
+  ease: "power2.out",
+  delay: 1
+});
 
