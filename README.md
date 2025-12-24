@@ -1,11 +1,11 @@
 # 🎄 Merry Christmas – Animated SVG Tree ✨
 
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge\&logo=javascript)
-![GSAP](https://img.shields.io/badge/GSAP-Animation-88CE02?style=for-the-badge\&logo=greensock)
-![HTML5](https://img.shields.io/badge/HTML5-SVG-E34F26?style=for-the-badge\&logo=html5)
-![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge\&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript)
+![GSAP](https://img.shields.io/badge/GSAP-Animation-88CE02?style=for-the-badge&logo=greensock)
+![HTML5](https://img.shields.io/badge/HTML5-SVG-E34F26?style=for-the-badge&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3)
 ![Christmas](https://img.shields.io/badge/🎄-Christmas%20Vibes-red?style=for-the-badge)
-![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge\&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge&logo=github)
 ![Stars](https://img.shields.io/github/stars/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
@@ -34,6 +34,7 @@ Sit back, relax, and enjoy the Christmas magic 🎁🎶
 👉 **[https://krishnachoudhary1969.github.io/Merry-Christmas/](https://krishnachoudhary1969.github.io/Merry-Christmas/)**
 
 *(Best viewed on desktop for full animation effects)*
+🔊 *Music starts after first user interaction (browser autoplay policy).*
 
 ---
 
@@ -68,10 +69,13 @@ Sit back, relax, and enjoy the Christmas magic 🎁🎶
 ```
 Merry-Christmas/
 │
-├── index.html      # Main SVG structure & script imports
-├── style.css       # Page styling & layout
-├── script.js       # GSAP animations & particle logic
-└── README.md       # You are here 🎄
+├── index.html         # Main SVG structure & script imports
+├── style.css          # Page styling & layout
+├── script.js          # GSAP animations & particle logic
+├── jingle-bells.mp3
+├── preview.gif
+├── README.md          # You are here 🎄
+└── LICENSE            # MIT Licence
 ```
 
 ---
@@ -138,6 +142,6 @@ Want to make it even cooler? Try this 👇
 ## 🎄 Final Note
 
 If this made you smile even a little — mission accomplished 😄
-Feel free to ⭐ star the repo, fork it, or spread the Christmas cheer!
+⭐ If you enjoyed this, consider starring the repo or forking it to build your own festive animation & spread the Christmas cheer!
 
 **Merry Christmas & Happy Coding! 🎄✨**
