@@ -271,6 +271,7 @@ toggle.addEventListener("click", async () => {
         }
       }, 100);
 
+      startTwinkle(); //start the twinkle
       toggle.textContent = "🔇 Mute";
     } else {
       fadeInterval = setInterval(() => {
@@ -282,6 +283,7 @@ toggle.addEventListener("click", async () => {
         }
       }, 100);
 
+       stopTwinkle(); //stop the twinkle
       toggle.textContent = "🔊 Music";
     }
 
@@ -320,19 +322,30 @@ gsap.from(".christmas-text", {
   delay: 2.5
 });
 
-// Twinkle effect
-function twinkleText() {
-  gsap.to(".christmas-text", {
-    textShadow: `0 0 ${gsap.utils.random(8, 22)}px rgba(255,255,255,${gsap.utils.random(0.5, 1)})`,
+let twinkleTween = null;
+
+function startTwinkle() {
+  if (twinkleTween) return;
+
+  twinkleTween = gsap.to(".christmas-text", {
+    textShadow: () =>
+      `0 0 ${gsap.utils.random(8, 22)}px rgba(255,255,255,${gsap.utils.random(0.5, 1)})`,
     duration: gsap.utils.random(0.8, 1.4),
     ease: "sine.inOut",
-    onComplete: twinkleText
+    repeat: -1,
+    yoyo: true
   });
 }
 
-// Start twinkle slightly after fade-in
-gsap.delayedCall(4.5, twinkleText);
-
+function stopTwinkle() {
+  if (twinkleTween) {
+    twinkleTween.kill();
+    twinkleTween = null;
+    gsap.set(".christmas-text", {
+      textShadow: "0 0 6px rgba(255,255,255,0.4)"
+    });
+  }
+}
 
 gsap.from(".footer-credit", {
   opacity: 0,
