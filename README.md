@@ -6,6 +6,9 @@
 ![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge\&logo=css3)
 ![Christmas](https://img.shields.io/badge/🎄-Christmas%20Vibes-red?style=for-the-badge)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge\&logo=github)
+![Stars](https://img.shields.io/github/stars/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
 
 <p align="center">
   <img src="preview.gif" alt="Merry Christmas SVG Animation Preview" width="720">
