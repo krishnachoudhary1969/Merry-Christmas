@@ -10,6 +10,7 @@
 ![Forks](https://img.shields.io/github/forks/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/krishnachoudhary1969/Merry-Christmas?style=for-the-badge)
 
+
 <p align="center">
   <img src="preview.gif" alt="Merry Christmas SVG Animation Preview" width="720">
 </p>
