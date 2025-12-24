@@ -70,17 +70,12 @@ svg{
   bottom: 60px;
   width: 100%;
   text-align: center;
-  color: #f5f5f5;
+  color: #f8f3e8;
   font-size: 20px;
   font-family: "Georgia", "Times New Roman", serif;
   letter-spacing: 1px;
-  opacity: 0.9;
+  opacity: 0.85;
   pointer-events: none;
   z-index: 5;
-}
-
-.christmas-text {
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
-
-
